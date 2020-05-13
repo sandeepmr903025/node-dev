@@ -2,7 +2,7 @@ console.log('you are awesome');
 
 const fetchWeather = (location) => {
     document.querySelector('#place').textContent = 'Loading...';
-    fetch('http://localhost:3001/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         console.log(response.body);
         if (!response) {
             document.querySelector('#place').textContent = 'unable to find location';
