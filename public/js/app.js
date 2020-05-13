@@ -19,7 +19,7 @@ const fetchWeather = (location) => {
                 }
             });
         }
-    })
+    });
 }
 
 const weatherForm = document.querySelector('form');

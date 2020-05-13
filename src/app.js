@@ -2,12 +2,15 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 
-// Define paths for Express Config.
-const forecastFilePath = path.join(__dirname, '../../weather-app/utils/forecast');
-const forecast = require(forecastFilePath);
+// Define paths for Express Config -- important.
 
-const geoCodeFilePath = path.join(__dirname, '../../weather-app/utils/geoCode');
-const geoCode = require(geoCodeFilePath);
+// Get from different module
+//const forecastFilePath = path.join(__dirname, '../../weather-app/utils/forecast');
+const forecast = require('./utils/forecast');
+
+// Get from different module
+//const geoCodeFilePath = path.join(__dirname, '../../weather-app/utils/geoCode');
+const geoCode = require('./utils/geoCode');
 
 const indexPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -15,7 +18,7 @@ const partialsPath = path.join(__dirname, '../templates/partials');
 
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 // Setup handlebars engine and customize views location.
 // use handlebar template engine to load dynamic html files.
@@ -165,5 +168,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is setup on port 3001');
+    console.log('Server is setup on port '+port);
 });
