@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <link rel="icon" href="/img/weather.png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <h4>Use this site to get real time weather</h4>
+
+    <form>
+      <input type="text" placeholder="location" id="location"/>
+      <button>Search</button>
+    </form>
+
+    <p id="place"></p>
+    <p id="temperature"></p>
+  </div>
+
+  <script type="application/javascript" src="/js/app.js"></script>
+</body>
+
+<footer>
+  {{>footer}}
+</footer>
+</html>
