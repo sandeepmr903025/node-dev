@@ -168,5 +168,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is setup on port  '+port);
+    console.log('Server is setup on port'+port);
 });
